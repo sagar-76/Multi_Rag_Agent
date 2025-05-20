@@ -1,0 +1,14 @@
+mysql-connector-python
+langchain
+langchain-community
+langchain_groq
+pymysql
+python-dotenv
+pandas
+langgraph
+PyPDF2
+sentence-transformers
+faiss-cpu
+streamlit
+fastapi
+uvicorn
