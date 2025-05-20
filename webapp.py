@@ -3,10 +3,11 @@ import streamlit as st
 from ML_rag import PDFRAGQA
 from m import SQLAgentGroq
 
+
 # === Initialize PDF RAG ===
 @st.cache_resource(show_spinner=False)
 def init_pdf_rag():
-    rag = PDFRAGQA(groq_api_key="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")
+    rag = PDFRAGQA(groq_api_key=  "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")
     text = rag.load_pdf("D:\\download\\sagar\\The Hundred-Page Machine Learning Book PDF.pdf")
     rag.create_vector_store(text)
     return rag
@@ -15,7 +16,7 @@ def init_pdf_rag():
 @st.cache_resource(show_spinner=False)
 def init_sql_agent():
     sql_agent = SQLAgentGroq(
-        groq_api_key="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",
+        groq_api_key= "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",
         db_uri="mysql+pymysql://root:root@127.0.0.1:3306/campusx"
     )
     return sql_agent
